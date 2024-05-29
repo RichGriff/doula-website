@@ -1,10 +1,11 @@
+import { GlobeAltIcon } from "@heroicons/react/24/outline"
 import { BookOpen, FolderIcon, LayoutGrid, Mails, ServerIcon, Settings2, SignalIcon, Users, WalletCards } from "lucide-react"
 
 export const navigation = [
   { name: 'Dashboard', href: '/admin', icon: LayoutGrid, current: false },
   { name: 'Customers', href: '/admin/customers', icon: Users, current: false },
   { name: 'Messages', href: '/admin/messages', icon: Mails, current: false },
-  { name: 'Pages', href: '/admin/pages', icon: BookOpen, current: false },
+  { name: 'Website', href: '/admin/website?page=homepage', icon: GlobeAltIcon, current: false },
   { name: 'Payments', href: '/admin/payments', icon: WalletCards, current: false },
   { name: 'Settings', href: '/admin/settings', icon: Settings2, current: false },
 ]
@@ -50,3 +51,40 @@ export const activityItems = [
   },
   // More items...
 ]
+
+export const contentTypes = {
+  pages: [
+    {
+      title: 'Homepage',
+      key: 'homepage',
+      active: true
+    },
+    {
+      title: 'About Me',
+      key: 'about-me',
+      active: false
+    },
+    {
+      title: 'Services',
+      key: 'services',
+      active: false
+    },
+    {
+      title: 'Articles',
+      key: 'articles',
+      active: false
+    }
+  ],
+  config: [
+    {
+      title: 'Email',
+      key: 'email',
+      active: false
+    },
+    {
+      title: 'Socials',
+      key: 'socials',
+      active: false
+    },
+  ]
+}

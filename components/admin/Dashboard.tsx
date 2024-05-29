@@ -155,9 +155,9 @@ export default function Dashboard({ children } : { children: ReactNode }) {
               ))}
             </ul>
           </main> */}
-          <div className='py-4 px-6'>
+          {/* <div className='py-4 px-6'> */}
             {children}
-          </div>
+          {/* </div> */}
 
           {/* <ActivityFeed /> */}
         </div>
