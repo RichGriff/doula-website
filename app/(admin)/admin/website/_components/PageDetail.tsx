@@ -3,7 +3,7 @@
 import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
 import { useSearchParams } from 'next/navigation'
-import React, { useEffect } from 'react'
+import React, { Suspense, useEffect } from 'react'
 
 const PageDetail = () => {
   const searchParams = useSearchParams()
@@ -14,7 +14,7 @@ const PageDetail = () => {
   }, [])
   
   return (
-    <>
+    <Suspense>
       <div className='p-4 flex justify-between items-center'>
         <div className='flex flex-col justify-start items-start gap-2'>
           <h3 className='text-lg font-semibold capitalize'>{selectedPage?.replaceAll('-', ' ')}</h3>
@@ -28,7 +28,7 @@ const PageDetail = () => {
       <div className='p-4'>
         Form
       </div>
-    </>
+    </Suspense>
   )
 }
 
