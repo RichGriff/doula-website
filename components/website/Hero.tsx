@@ -28,8 +28,8 @@ export default function Hero() {
                 alt=""
               /> */}
               <div className='flex justify-start items-center gap-2 mt-3'>
-                <BabyIcon className='w-8 h-8 text-violet-800' />
-                <span className='text-violet-800 font-semibold text-xl'>Doula.</span>
+                <BabyIcon className='w-8 h-8 text-violet-700' />
+                <span className='text-violet-700 font-semibold text-xl'>Doula.</span>
               </div>
             </a>
           </div>
@@ -61,12 +61,16 @@ export default function Hero() {
           <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
-                <span className="sr-only">Your Company</span>
+                {/* <span className="sr-only">Your Company</span>
                 <img
                   className="h-8 w-auto"
                   src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
                   alt=""
-                />
+                /> */}
+                <div className='flex justify-start items-center gap-2 mt-3'>
+                  <BabyIcon className='w-8 h-8 text-violet-700' />
+                  <span className='text-violet-700 font-semibold text-xl'>Doula.</span>
+                </div>
               </a>
               <button
                 type="button"
@@ -90,14 +94,14 @@ export default function Hero() {
                     </a>
                   ))}
                 </div>
-                <div className="py-6">
+                {/* <div className="py-6">
                   <a
                     href="#"
                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >
                     Log in
                   </a>
-                </div>
+                </div> */}
               </div>
             </div>
           </DialogPanel>
@@ -156,7 +160,7 @@ export default function Hero() {
                   <div className="mt-10 flex items-center gap-x-6">
                     <a
                       href="#"
-                      className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                      className="rounded-md bg-violet-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-violet-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600"
                     >
                       How I can help
                     </a>

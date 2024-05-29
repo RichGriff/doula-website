@@ -57,7 +57,16 @@ export const contentTypes = {
     {
       title: 'Homepage',
       key: 'homepage',
-      active: true
+      active: true,
+      data: {
+        headline: 'Testing',
+        tagline: 'Test',
+        primaryText: 'Button',
+        primaryUrl: '/',
+        secondaryText: 'Button',
+        secondaryUrl: '/',
+        images: ['https://images.unsplash.com/photo-1542644384-49f9febd8443?q=80&w=2976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D','https://images.unsplash.com/photo-1538678867871-8a43e7487746?q=80&w=3088&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 'https://images.unsplash.com/photo-1524102128837-5667674b60d6?q=80&w=3165&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D']
+      }
     },
     {
       title: 'About Me',
