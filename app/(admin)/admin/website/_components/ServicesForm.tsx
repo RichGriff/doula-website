@@ -188,13 +188,15 @@ const ServicesForm = ({ data }: ServicesFormProps) => {
           {services.length > 0 && services.map((service: any) => (
             <TableRow key={crypto.randomUUID()}>
               <TableCell>
-                <div className="rounded-md w-12 h-12 relative overflow-hidden group">
-                  <Image 
+                <div className="rounded-md w-12 h-12 relative overflow-hidden group bg-gray-100 flex justify-center items-center">
+                  {service.image ? (<Image 
                     src={service.image} 
                     alt='' 
                     fill 
                     className="object-cover group-hover:cursor-pointer"
-                  />
+                  />) : (
+                    <ImageIcon className="w-4 h-4" />
+                  )}
                 </div>
               </TableCell>
               <TableCell className="font-medium">{service.name}</TableCell>
