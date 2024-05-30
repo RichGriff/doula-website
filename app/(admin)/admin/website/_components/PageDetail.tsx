@@ -40,8 +40,8 @@ const PageDetail = () => {
       <Separator />
       <div className='p-4'>
         {(pageData && selectedPage === 'homepage' && <HomepageForm data={pageData} /> )}
-        {(pageData && selectedPage === 'about-me' && <AboutMeForm /> )}
-        {(pageData && selectedPage === 'services' && <ServicesForm /> )}
+        {(pageData && selectedPage === 'about-me' && <AboutMeForm data={pageData} /> )}
+        {(pageData && selectedPage === 'services' && <ServicesForm data={pageData} /> )}
         {(pageData && selectedPage === 'articles' && <ArticlesForm /> )}
       </div>
     </Suspense>

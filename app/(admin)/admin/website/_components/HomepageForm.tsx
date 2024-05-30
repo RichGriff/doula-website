@@ -3,7 +3,7 @@
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
-
+import { useState, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import {
   Form,
@@ -17,9 +17,8 @@ import {
 import { Input } from "@/components/ui/input"
 import Image from "next/image"
 import { Trash2 } from "lucide-react"
-import { useRef } from "react"
 
-const ACCEPTED_FILE_TYPES = ["image/jpeg", "image/png"]
+const ACCEPTED_FILE_TYPES = ["image/jpeg", "image/png", "image/jpg"]
 
 const formSchema = z.object({
   headline: z.string().min(2).max(50),
@@ -43,7 +42,7 @@ const formSchema = z.object({
   }, {
     message: "Only JPG, JPEG, and PNG files are allowed.",
   }).optional(),
-})
+});
 
 type HomepageFormProps = {
   data: any
@@ -61,13 +60,26 @@ const HomepageForm = ({ data }: HomepageFormProps) => {
       secondaryUrl: '',
       images: null,
     }
-  })
+  });
 
-  const fileInputRef = useRef<HTMLInputElement | null>(null)
+  const [selectedFiles, setSelectedFiles] = useState<FileList | null>(null);
+  const fileInputRef = useRef<HTMLInputElement | null>(null);
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log('Values', values)
+    console.log('Values', values);
   }
+
+  const handleFileInputClick = () => {
+    if (fileInputRef.current) {
+      fileInputRef.current.click();
+    }
+  };
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const files = e.target.files;
+    setSelectedFiles(files);
+    form.setValue('images', files); // Update the form state with selected files
+  };
 
   return (
     <Form {...form}>
@@ -167,14 +179,33 @@ const HomepageForm = ({ data }: HomepageFormProps) => {
             <FormItem>
               <FormLabel>Images</FormLabel>
               <FormControl>
-                <input
-                  type="file"
-                  multiple
-                  ref={fileInputRef}
-                  onChange={e => {
-                    field.onChange(e.target.files);
-                  }}
-                />
+                <div>
+                  <input
+                    type="file"
+                    multiple
+                    ref={fileInputRef}
+                    onChange={handleFileChange}
+                    className="hidden"
+                  />
+                  <p className="text-muted-foreground text-sm mb-4">Upload new images to use on the homepage hero section.</p>
+                  <Button
+                    type="button"
+                    onClick={handleFileInputClick}
+                    variant={"secondary"}
+                    // className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+                  >
+                    Upload Images
+                  </Button>
+                  {selectedFiles && (
+                    <div className="mt-2">
+                      {Array.from(selectedFiles).map((file, index) => (
+                        <div key={index} className="text-sm text-gray-700">
+                          {file.name}
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
               </FormControl>
               <FormMessage />
             </FormItem>

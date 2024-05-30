@@ -57,7 +57,6 @@ export const contentTypes = {
     {
       title: 'Homepage',
       key: 'homepage',
-      active: true,
       data: {
         headline: 'Testing',
         tagline: 'Test',
@@ -71,17 +70,26 @@ export const contentTypes = {
     {
       title: 'About Me',
       key: 'about-me',
-      active: false
+      data: {
+        featuredImage: 'https://images.unsplash.com/photo-1542644384-49f9febd8443?q=80&w=2976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        intro: '',
+        experience: '',
+        buttonText: 'Button',
+        buttonUrl: '/'
+      }
     },
     {
       title: 'Services',
       key: 'services',
-      active: false
+      data: {
+        services: [
+          { name: 'Birthing', description: 'Attending and support you through your birthing journey', image: 'https://images.unsplash.com/photo-1542644384-49f9febd8443?q=80&w=2976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' }
+        ]
+      }
     },
     {
       title: 'Articles',
       key: 'articles',
-      active: false
     }
   ],
   config: [

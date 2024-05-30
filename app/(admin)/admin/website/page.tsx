@@ -9,7 +9,6 @@ const PagesPage = () => {
     <Suspense>
       <div className='flex justify-start items-start w-full'>
         <WebsiteMenu />
-        
         <div className='w-3/4'>
           <PageDetail />
         </div>

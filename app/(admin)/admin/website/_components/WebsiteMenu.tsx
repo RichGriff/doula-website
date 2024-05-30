@@ -11,7 +11,7 @@ const WebsiteMenu = () => {
 
   return (
     <Suspense>
-      <div className="bg-gray-100 w-1/4 min-h-screen">
+      <div className="bg-gray-100 w-1/6 min-h-screen">
         <div className='mb-2'>
           <span className='text-xs flex uppercase font-semibold py-4 px-6 text-muted-foreground'>Pages</span>
           <ul className='w-full mb-6' >

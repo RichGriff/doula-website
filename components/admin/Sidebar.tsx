@@ -146,7 +146,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen } : SidebarProps) => {
                         <a
                           href={item.href}
                           className={cn(
-                            pathname === item.href
+                            pathname === item.href.split('?')[0]
                               ? 'bg-violet-800 text-white'
                               : 'text-white hover:bg-violet-700',
                             'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold'
