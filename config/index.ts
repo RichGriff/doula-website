@@ -5,7 +5,7 @@ export const navigation = [
   { name: 'Dashboard', href: '/admin', icon: LayoutGrid, current: false },
   { name: 'Customers', href: '/admin/customers', icon: Users, current: false },
   { name: 'Messages', href: '/admin/messages', icon: Mails, current: false },
-  { name: 'Website', href: '/admin/website?page=homepage', icon: GlobeAltIcon, current: false },
+  { name: 'Website', href: '/admin/website', icon: GlobeAltIcon, current: false },
   { name: 'Payments', href: '/admin/payments', icon: WalletCards, current: false },
   { name: 'Settings', href: '/admin/settings', icon: Settings2, current: false },
 ]
