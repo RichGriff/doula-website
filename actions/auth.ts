@@ -7,6 +7,8 @@ import * as jose from 'jose'
 import { cookies } from "next/headers"
 
 export const login = async (email: string, password: string) => {
+  console.log(email, password)
+  
   // Sample user to get logic in place
   const user = await prisma.user.findUnique({
     where: {
@@ -37,7 +39,7 @@ export const login = async (email: string, password: string) => {
     httpOnly: true,
     expires: Date.now() + 24 * 60 * 60 * 1000 * 3,
     path: '/',
-    sameSite: 'lax'
+    sameSite: 'strict'
   })
 
   redirect('/admin')
