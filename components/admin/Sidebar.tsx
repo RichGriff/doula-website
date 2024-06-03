@@ -11,10 +11,12 @@ import {
   Transition,
   TransitionChild,
 } from '@headlessui/react'
-import { BabyIcon, X } from 'lucide-react'
+import { BabyIcon, LogOut, Trash2, X } from 'lucide-react'
 import { navigation, teams } from '@/config'
 import { cn } from '@/lib/utils'
 import { usePathname } from 'next/navigation'
+import { Button } from '../ui/button'
+import { logout } from '@/actions/auth'
 
 type SidebarProps = {
   sidebarOpen: boolean
@@ -99,7 +101,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen } : SidebarProps) => {
                         ))}
                           </ul>
                         </li>
-                        <li className="-mx-6 mt-auto">
+                        <li className="-mx-6 mt-auto relative">
                           <a
                             href="#"
                             className="flex items-center gap-x-4 px-6 py-3 text-sm font-semibold leading-6 text-white hover:bg-violet-700"
@@ -112,6 +114,15 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen } : SidebarProps) => {
                             <span className="sr-only">Your profile</span>
                             <span aria-hidden="true">Bridie Solman</span>
                           </a>
+                          <div className='absolute top-2 right-4'>
+                            <Button size={'icon'} 
+                              onClick={() => logout()} 
+                              variant={'ghost'}
+                              className='hover:bg-red-500/30'
+                            >
+                              <LogOut className='w-4 h-4 text-white'/>
+                            </Button>
+                          </div>
                         </li>
                       </ul>
                     </nav>
@@ -159,7 +170,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen } : SidebarProps) => {
                     ))}
                   </ul>
                 </li>
-                <li className="-mx-6 mt-auto">
+                <li className="-mx-6 mt-auto relative">
                   <a
                     href="#"
                     className="flex items-center gap-x-4 px-6 py-3 text-sm font-semibold leading-6 text-white hover:bg-violet-700"
@@ -172,6 +183,15 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen } : SidebarProps) => {
                     <span className="sr-only">Your profile</span>
                     <span aria-hidden="true">Bridie Solman</span>
                   </a>
+                  <div className='absolute top-2 right-4'>
+                    <Button size={'icon'} 
+                      onClick={() => logout()} 
+                      variant={'ghost'}
+                      className='hover:bg-red-500/30'
+                    >
+                      <LogOut className='w-4 h-4 text-white'/>
+                    </Button>
+                  </div>
                 </li>
               </ul>
             </nav>
