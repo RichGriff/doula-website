@@ -1,5 +1,5 @@
 import { GlobeAltIcon } from "@heroicons/react/24/outline"
-import { BookOpen, FolderIcon, LayoutGrid, Mails, ServerIcon, Settings2, SignalIcon, Users, WalletCards } from "lucide-react"
+import { BookOpen, FolderIcon, LayoutGrid, Mails, ServerIcon, Settings2, SignalIcon, User, Users, WalletCards } from "lucide-react"
 
 export const navigation = [
   { name: 'Dashboard', href: '/admin', icon: LayoutGrid, current: false },
@@ -7,7 +7,7 @@ export const navigation = [
   { name: 'Messages', href: '/admin/messages', icon: Mails, current: false },
   { name: 'Website', href: '/admin/website', icon: GlobeAltIcon, current: false },
   { name: 'Payments', href: '/admin/payments', icon: WalletCards, current: false },
-  { name: 'Settings', href: '/admin/settings', icon: Settings2, current: false },
+  { name: 'Users', href: '/admin/users', icon: User, current: false },
 ]
 export const teams = [
   { id: 1, name: 'Planetaria', href: '#', initial: 'P', current: false },
