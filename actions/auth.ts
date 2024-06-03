@@ -37,7 +37,7 @@ export const login = async (email: string, password: string) => {
     httpOnly: true,
     expires: Date.now() + 24 * 60 * 60 * 1000 * 3,
     path: '/',
-    sameSite: 'strict'
+    sameSite: 'lax'
   })
 
   redirect('/admin')
