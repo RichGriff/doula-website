@@ -17,14 +17,14 @@ const ContentTypePage = async ({ params } : { params: { slug : string }}) => {
 
   return (
     <>
-      <div className='py-4 px-8 flex justify-between items-center'>
+      <div className='py-4 px-4 md:px-8 flex justify-between items-center'>
         <div className='flex flex-col justify-start items-start gap-2'>
           <h3 className='text-lg font-semibold capitalize'>{params.slug?.replaceAll('-', ' ')}</h3>
           <p className='text-sm text-muted-foreground'>This information is displayed on the website for this page.</p>
         </div>
       </div>
 
-      <div className='py-4 px-8'>
+      <div className='py-4 px-4 md:px-8'>
         {pageData && params.slug === 'homepage' && <HomepageForm data={pageData} />}
         {pageData && params.slug === 'about-me' && <AboutMeForm data={pageData} />}
         {pageData && params.slug === 'services' && <ServicesForm data={pageData} />}
