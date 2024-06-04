@@ -1,6 +1,10 @@
+import { createContentTypes } from '@/actions/seed'
 import { redirect } from 'next/navigation'
 
-const PagesPage = () => {
+const PagesPage = async () => {
+
+  // await createContentTypes()
+
   redirect('/admin/website/homepage')
   // return (
   //   <Suspense>
