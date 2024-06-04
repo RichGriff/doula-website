@@ -27,6 +27,9 @@ import { Input } from "@/components/ui/input"
 import { ImageIcon, MoreVertical, PlusIcon, Trash2 } from "lucide-react"
 import { Textarea } from "@/components/ui/textarea"
 import Image from "next/image"
+import { updateContentType } from "@/actions/contentTypes"
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const ACCEPTED_FILE_TYPES = ["image/jpeg", "image/png", "image/jpg"]
 
@@ -59,7 +62,9 @@ type ServicesFormProps = {
 
 const ServicesForm = ({ content }: ServicesFormProps) => {
   const { id, data } = content
-  
+  console.log(data)
+  const [loading, setLoading] = useState<boolean>(false)
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -70,20 +75,52 @@ const ServicesForm = ({ content }: ServicesFormProps) => {
   });
 
   const [selectedFiles, setSelectedFiles] = useState<FileList | null>(null);
-  const [services, setServices] = useState<any[]>(data.services);
+  // const [services, setServices] = useState<any[]>(data.services);
   const [toggleServiceAdd, setToggleServiceAdd] = useState<boolean>(false);
   const fileInputRef = useRef<HTMLInputElement | null>(null);
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log('Values', values);
+  async function onSubmit(values: z.infer<typeof formSchema>) {
     const newService = {
       name: values.name,
       description: values.description,
       image: ''
     }
 
-    setServices([...services, newService])
+    const newServices = [
+      ...data,
+      newService
+    ]
+
+    const updated = await updateContentType(id, JSON.stringify(newServices))
+
+    // setServices([...services, newService])
+
+    if(!updated) {
+      toast.error('Something went wrong', {
+        position: "bottom-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
+    }
+
+    toast.success('Updated Successfully', {
+      position: "bottom-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+    });
+
     setToggleServiceAdd(false)
+    setLoading(false)
   }
 
   const handleFileInputClick = () => {
@@ -190,7 +227,7 @@ const ServicesForm = ({ content }: ServicesFormProps) => {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {services.length > 0 && services.map((service: any) => (
+          {data.length > 0 && data.map((service: any) => (
             <TableRow key={crypto.randomUUID()}>
               <TableCell>
                 <div className="rounded-md w-12 h-12 relative overflow-hidden group bg-gray-100 flex justify-center items-center">
@@ -212,6 +249,18 @@ const ServicesForm = ({ content }: ServicesFormProps) => {
         </TableBody>
       </Table>
       </div>
+      <ToastContainer
+        position="bottom-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
     </>
   )
 }

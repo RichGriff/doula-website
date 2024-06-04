@@ -1,6 +1,7 @@
 'use server'
 
 import prisma from "@/lib/prisma"
+import { revalidatePath } from "next/cache"
 
 export const updateContentType = async (id: string, data: string) => {
   try {
@@ -13,6 +14,7 @@ export const updateContentType = async (id: string, data: string) => {
       }
     })
 
+    revalidatePath('/admin/website/[slug]/page')
     return true
   } catch (error) {
     console.log('ERR_UPDATE_CONTENT', error)
