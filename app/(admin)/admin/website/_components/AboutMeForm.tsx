@@ -18,6 +18,9 @@ import { Input } from "@/components/ui/input"
 import Image from "next/image"
 import { Trash2 } from "lucide-react"
 import { Textarea } from "@/components/ui/textarea"
+import { updateContentType } from "@/actions/contentTypes"
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const ACCEPTED_FILE_TYPES = ["image/jpeg", "image/png", "image/jpg"]
 
@@ -27,57 +30,87 @@ const formSchema = z.object({
   buttonText: z.string().min(1),
   buttonUrl: z.string().min(1),
 
-  featuredImage: z.custom<FileList | null>(files => {
-    if (files === null) {
-      return true; // No files selected, valid because the field is optional
-    }
-    if (!(files instanceof FileList)) {
-      return false;
-    }
-    const filesArray = Array.from(files);
-    if (filesArray.length !== 1) {
-      return false; // Only one file should be selected
-    }
-    return filesArray.every(file => ACCEPTED_FILE_TYPES.includes(file.type));
-  }, {
-    message: "Only one JPG, JPEG, or PNG file is allowed.",
-  }).optional(),
+  // featuredImage: z.custom<FileList | null>(files => {
+  //   if (files === null) {
+  //     return true; // No files selected, valid because the field is optional
+  //   }
+  //   if (!(files instanceof FileList)) {
+  //     return false;
+  //   }
+  //   const filesArray = Array.from(files);
+  //   if (filesArray.length !== 1) {
+  //     return false; // Only one file should be selected
+  //   }
+  //   return filesArray.every(file => ACCEPTED_FILE_TYPES.includes(file.type));
+  // }, {
+  //   message: "Only one JPG, JPEG, or PNG file is allowed.",
+  // }).optional(),
 });
 
 type AboutMeProps = {
-  data: any
+  content: {
+    id: string,
+    data: any
+  }
 }
 
-const AboutMe = ({ data }: AboutMeProps) => {
+const AboutMe = ({ content }: AboutMeProps) => {
+  const { id, data } = content 
+  const [loading, setLoading] = useState<boolean>(false)
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
-    defaultValues: data || {
-      intro: '',
-      experience: '',
-      buttonText: '',
-      buttonUrl: '',
-      featuredImage: null,
-    }
+    defaultValues: data
   });
 
   const [selectedFiles, setSelectedFiles] = useState<FileList | null>(null);
   const fileInputRef = useRef<HTMLInputElement | null>(null);
+   
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setLoading(true)
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log('Values', values);
+    const newContent = JSON.stringify(values)
+
+    const updated = await updateContentType(id, newContent)
+
+    if(!updated) {
+      toast.error('Something went wrong', {
+        position: "bottom-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
+    }
+
+    toast.success('Updated Successfully', {
+      position: "bottom-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+    });
+
+    setLoading(false)
   }
 
-  const handleFileInputClick = () => {
-    if (fileInputRef.current) {
-      fileInputRef.current.click();
-    }
-  };
+  // const handleFileInputClick = () => {
+  //   if (fileInputRef.current) {
+  //     fileInputRef.current.click();
+  //   }
+  // };
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const files = e.target.files;
-    setSelectedFiles(files);
-    form.setValue('featuredImage', files); // Update the form state with selected files
-  };
+  // const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  //   const files = e.target.files;
+  //   setSelectedFiles(files);
+  //   form.setValue('featuredImage', files); // Update the form state with selected files
+  // };
 
   return (
     <Form {...form}>
@@ -136,7 +169,7 @@ const AboutMe = ({ data }: AboutMeProps) => {
             )}
           />
         </div>
-        {data.featuredImage ? (
+        {/* {data.featuredImage ? (
           <div className="flex flex-col justify-start items-start gap-4">
             <span className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Featured Image</span>
             <div className="rounded-md w-48 h-48 relative overflow-hidden group">
@@ -195,9 +228,25 @@ const AboutMe = ({ data }: AboutMeProps) => {
               </FormItem>
             )}
           />
-        )}
-        <Button type="submit" className="bg-violet-600 hover:bg-violet-700">Save</Button>
+        )} */}
+        <div className="pt-6">
+          <Button type="submit" disabled={loading} className="bg-violet-600 hover:bg-violet-700">
+            {loading ? 'Saving...' : 'Save' }
+          </Button>
+        </div>
       </form>
+      <ToastContainer
+        position="bottom-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
     </Form>
   )
 }
