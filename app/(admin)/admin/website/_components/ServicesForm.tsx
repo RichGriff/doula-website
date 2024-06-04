@@ -51,10 +51,15 @@ const formSchema = z.object({
 });
 
 type ServicesFormProps = {
-  data: any
+  content: {
+    id: string,
+    data: any
+  }
 }
 
-const ServicesForm = ({ data }: ServicesFormProps) => {
+const ServicesForm = ({ content }: ServicesFormProps) => {
+  const { id, data } = content
+  
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {

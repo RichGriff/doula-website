@@ -45,7 +45,7 @@ const ContentTypePage = async ({ params } : { params: { slug : string }}) => {
       <div className='py-4 px-4 md:px-8'>
         {pageData && params.slug === 'homepage' && <HomepageForm data={pageData} />}
         {pageData && params.slug === 'about-me' && <AboutMeForm content={pageData} />}
-        {pageData && params.slug === 'services' && <ServicesForm data={pageData} />}
+        {pageData && params.slug === 'services' && <ServicesForm content={pageData} />}
       </div>
     </>
   )
