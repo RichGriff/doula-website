@@ -62,7 +62,6 @@ type ServicesFormProps = {
 
 const ServicesForm = ({ content }: ServicesFormProps) => {
   const { id, data } = content
-  console.log(data)
   const [loading, setLoading] = useState<boolean>(false)
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -81,6 +80,7 @@ const ServicesForm = ({ content }: ServicesFormProps) => {
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     const newService = {
+      id: crypto.randomUUID(),
       name: values.name,
       description: values.description,
       image: ''
@@ -134,6 +134,10 @@ const ServicesForm = ({ content }: ServicesFormProps) => {
     setSelectedFiles(files);
     form.setValue('image', files); // Update the form state with selected files
   };
+
+  const handleDelete = async (id: string) => {
+    
+  }
 
   return (
     <>
@@ -243,7 +247,11 @@ const ServicesForm = ({ content }: ServicesFormProps) => {
               </TableCell>
               <TableCell className="font-medium">{service.name}</TableCell>
               <TableCell>{service.description}</TableCell>
-              <TableCell className="text-right"><MoreVertical className="w-4 h-4"/></TableCell>
+              <TableCell className="text-right">
+                <Button size={"icon"} variant={"ghost"} onClick={() => handleDelete(service.id)}>
+                  <Trash2 className="w-4 h-4" />
+                </Button>
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>

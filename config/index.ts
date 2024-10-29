@@ -9,20 +9,24 @@ export const navigation = [
   { name: 'Website', href: '/admin/website', icon: GlobeAltIcon, current: false },
   { name: 'Users', href: '/admin/users', icon: User, current: false },
 ]
+
 export const teams = [
   { id: 1, name: 'Planetaria', href: '#', initial: 'P', current: false },
   { id: 2, name: 'Protocol', href: '#', initial: 'P', current: false },
   { id: 3, name: 'Tailwind Labs', href: '#', initial: 'T', current: false },
 ]
+
 export const statuses = {
   offline: 'text-gray-500 bg-gray-100/10',
   online: 'text-green-400 bg-green-400/10',
   error: 'text-rose-400 bg-rose-400/10',
 }
+
 export const environments = {
   Preview: 'text-gray-400 bg-gray-400/10 ring-gray-400/20',
   Production: 'text-indigo-400 bg-indigo-400/10 ring-indigo-400/30',
 }
+
 export const deployments = [
   {
     id: 1,
@@ -36,6 +40,7 @@ export const deployments = [
   },
   // More deployments...
 ]
+
 export const activityItems = [
   {
     user: {
@@ -104,4 +109,17 @@ export const contentTypes = {
       active: false
     },
   ]
+}
+
+export const heroData = {
+  headline: 'Congratulations on your new journey!',
+  subHeadline: 'Expert support for pregnancy, birth and beyond. Bringing beauty into motherhood.',
+  callToAction: {
+    variant: 'primary',
+    text: 'Get in touch'
+  },
+  secondaryCallToAction: {
+    variant: 'link',
+    text: 'Find out more'
+  },
 }
