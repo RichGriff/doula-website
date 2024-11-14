@@ -50,7 +50,7 @@ export default function ContactForm() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="flex flex-col justify-center items-center">
           <span className="uppercase text-sm text-[#5E55AE] font-medium">
-            Let's Chat
+            Lets Chat
           </span>
           <h3 className="text-3xl font-heading">Start your journey with me</h3>
         </div>
