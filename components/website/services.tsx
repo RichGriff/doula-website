@@ -1,108 +1,73 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
-import { BabyIcon, CheckIcon, HeartIcon, StethoscopeIcon } from "lucide-react"
+import { CheckCircleIcon, MoveRightIcon } from "lucide-react"
+import Image from "next/image"
 import { Button } from "../ui/button"
+
+const services = [
+  {
+    id: 1, 
+    title: 'Parental Support',
+    icon: '/images/service1.svg',
+    features: [
+      { id: crypto.randomUUID, title: 'Personalized birth plan creation' },
+      { id: crypto.randomUUID, title: 'Childbirth education classes' },
+      { id: crypto.randomUUID, title: 'Pregnancy wellness guidance' }
+    ]
+  },
+  {
+    id: 2, 
+    title: 'Birthing Guidance',
+    icon: '/images/service2.svg',
+    features: [
+      { id: crypto.randomUUID, title: 'Continious labour support' },
+      { id: crypto.randomUUID, title: 'Pain management techniques' },
+      { id: crypto.randomUUID, title: 'Partner support coaching' }
+    ]
+  },
+  {
+    id: 3, 
+    title: 'Postpartum Care',
+    icon: '/images/service3.svg',
+    features: [
+      { id: crypto.randomUUID, title: 'Breastfeeding support' },
+      { id: crypto.randomUUID, title: 'Newborn care education' },
+      { id: crypto.randomUUID, title: 'Emotional support for new parents' }
+    ]
+  }
+] as any[]
 
 const Services = () => {
   return (
-    <div className="bg-gray-50 py-24 sm:py-32">
+    <div className="bg-[#FFFDFB] py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-base/7 font-semibold text-indigo-600">Services</h2>
-          <p className="mt-2 text-balance text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
-            My Services 
-          </p>
-        </div>
-        <div className="mx-auto mt-16 flow-root max-w-2xl sm:mt-20 lg:mx-0 lg:max-w-none">
-          <div className="grid grid-cols-3 gap-4">
-          <Card>
-            <CardHeader>
-              <CardTitle>
-                <div className="flex flex-col items-start gap-y-4">
-                  <HeartIcon className="size-10" />
-                  <p>Parental Support</p>
-                </div>
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <ul className="flex flex-col items-start gap-y-2 mb-6">
-                <li className="flex items-center gap-3">
-                  <CheckIcon className="size-4 text-emerald-600" />
-                  <p>Personalized borth plan creation</p>
-                </li>
-                <li className="flex items-center gap-3">
-                  <CheckIcon className="size-4 text-emerald-600" />
-                  <p>Childbirth education classes</p>
-                </li>
-                <li className="flex items-center gap-3">
-                  <CheckIcon className="size-4 text-emerald-600" />
-                  <p>Pregnancy wellness guidance</p>
-                </li>
-              </ul>
-              <Button variant={"primary"} className="w-full">Learn More</Button>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle>
-                <div className="flex flex-col items-start gap-y-4">
-                  <BabyIcon className="size-10" />
-                  <p>Birth Doula</p>
-                </div>
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <ul className="flex flex-col items-start gap-y-2 mb-6">
-                <li className="flex items-center gap-3">
-                  <CheckIcon className="size-4 text-emerald-600" />
-                  <p>Continious labour support</p>
-                </li>
-                <li className="flex items-center gap-3">
-                  <CheckIcon className="size-4 text-emerald-600" />
-                  <p>Pain management techniques</p>
-                </li>
-                <li className="flex items-center gap-3">
-                  <CheckIcon className="size-4 text-emerald-600" />
-                  <p>Partner support coaching</p>
-                </li>
-              </ul>
-              <Button variant={"primary"} className="w-full">Learn More</Button>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle>
-                <div className="flex flex-col items-start gap-y-4">
-                  <StethoscopeIcon className="size-10" />
-                  <p>Postpartum Care</p>
-                </div>
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <ul className="flex flex-col items-start gap-y-2 mb-6">
-                <li className="flex items-center gap-3">
-                  <CheckIcon className="size-4 text-emerald-600" />
-                  <p>Breastfeeding support</p>
-                </li>
-                <li className="flex items-center gap-3">
-                  <CheckIcon className="size-4 text-emerald-600" />
-                  <p>Newborn care education</p>
-                </li>
-                <li className="flex items-center gap-3">
-                  <CheckIcon className="size-4 text-emerald-600" />
-                  <p>Emotional support for new parents</p>
-                </li>
-              </ul>
-              <Button variant={"primary"} className="w-full">Learn More</Button>
-            </CardContent>
-          </Card>
+        {services.length === 0 && (
+          <div className="flex justify-center items-center text-muted-foreground">
+            No services found.
           </div>
+        )} 
+        <div className="grid grid-cols-3 gap-8">
+          {services.map((service: any) => (
+            <div key={service.id} className="p-6">
+              <div className="flex flex-col justify-start items-start gap-y-4">
+                <img src={service.icon} alt={service.title} />
+                <h2 className="text-3xl font-heading font-medium my-2 text-[#2C384A]">{service.title}</h2>
+                <ul>
+                  {service.features.map((feature : any) => (
+                    <li key={feature.id} className="flex justify-start items-center gap-3 mb-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-5 text-[#69BC85]">
+                        <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                      </svg>
+
+                      {/* <CheckCircleIcon className="size-4 text-[#69BC85]" /> */}
+                      <p className="font-heading text-lg text-[#2C384A]">{feature.title}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="flex justify-center items-center my-6">
+          <Button className='uppercase text-xs py-6 px-8 bg-[#5E55AE] hover:bg-[#554d9e] text-white'>See all prices <MoveRightIcon className="ml-2 size-4" /></Button>
         </div>
       </div>
     </div>
