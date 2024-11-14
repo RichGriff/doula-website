@@ -42,7 +42,7 @@ export default function About() {
         </div>
       </div>
 
-      <Image src={'/images/hero-accent-1.png'} alt='' width={400} height={200} className='absolute top-0 -right-36' />
+      <Image src={'/images/hero-accent-1.png'} alt='' width={300} height={200} className='absolute top-0 right-24' />
     </div>
   );
 }

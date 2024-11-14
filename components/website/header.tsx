@@ -25,7 +25,7 @@ export default function Header() {
     <div className="bg-[#F4ECE4] h-24">
       <header
         className={`inset-x-0 top-0 z-50 fixed transition-colors duration-300 ${
-          isScrolled ? 'bg-[#F4ECE490] backdrop-blur-sm' : 'bg-transparent'
+          isScrolled ? 'bg-[#F4ECE499] backdrop-blur' : 'bg-transparent'
         }`}
       >
         <Navbar />
