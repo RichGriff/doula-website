@@ -12,7 +12,7 @@ export default function About() {
             src={'/images/about-me.jpg'} 
             alt="About me image" 
             layout="fill"
-            className="object-cover rounded-tr-full rounded-br-full"
+            className="object-cover rounded-tr-full rounded-br-full z-10"
             style={{
               objectPosition: 'center 30%', // Centers and shifts the image upward slightly
               transform: 'translateY(-5%)' // Additional fine-tuning for upward adjustment
