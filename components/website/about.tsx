@@ -4,7 +4,7 @@ import { MoveRightIcon } from "lucide-react";
 
 export default function About() {
   return (
-    <div className="bg-[#F4ECE4] py-24 relative  mb-64">
+    <div className="bg-[#F4ECE4] py-24 relative">
       {/* Image Container */}
       <div className="relative flex justify-end">
         <div className="absolute left-[-150px] top-[0] w-[800px] h-[560px] rounded-tr-full rounded-br-full">
