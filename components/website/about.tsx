@@ -7,7 +7,7 @@ export default function About() {
     <div className="bg-[#F4ECE4] py-24 relative">
       {/* Image Container */}
       <div className="relative flex justify-end">
-        <div className="absolute left-[-150px] top-[0] w-[800px] h-[560px] rounded-tr-full rounded-br-full">
+        <div className="hidden md:flex md:absolute md:left-[-150px] md:top-[0] w-[800px] h-[560px] rounded-tr-full rounded-br-full">
           <Image 
             src={'/images/about-me.jpg'} 
             alt="About me image" 
@@ -22,7 +22,18 @@ export default function About() {
       </div>
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 relative z-10">
-        <div></div>
+        <div className="flex md:hidden w-full h-[260px] bg-red-400 rounded-md relative">
+          <Image
+            src={'/images/about-me.jpg'}
+            fill
+            alt=''
+            className="object-cover rounded-md"
+            style={{
+              objectPosition: 'center 30%',
+            }}
+          />
+        </div>
+        <div className="hidden md:flex" />
         
         {/* Text Content */}
         <div className="">
@@ -42,7 +53,7 @@ export default function About() {
         </div>
       </div>
 
-      <Image src={'/images/hero-accent-1.png'} alt='' width={300} height={200} className='absolute top-0 right-24' />
+      <Image src={'/images/hero-accent-1.png'} alt='' width={300} height={200} className='hidden md:absolute top-0 right-24' />
     </div>
   );
 }

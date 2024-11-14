@@ -32,7 +32,7 @@ const Process = () => {
         </div>
         <div className='py-16'>
           {processSteps.map((step: any) => (
-            <div key={step.id} className='grid grid-cols-2 mb-10'>
+            <div key={step.id} className='grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-0 mb-10'>
               <div>
                 <span className='uppercase text-sm text-[#5E55AE] font-medium'>Step {step.step}:</span>
                 <h3 className="text-2xl text-pretty font-heading">{step.title}</h3>
@@ -44,7 +44,7 @@ const Process = () => {
           ))}
         </div>
       </div>
-      <Image src={'/images/process-accent.svg'} alt='' width={350} height={170} className='absolute bottom-0 left-0' />
+      <Image src={'/images/process-accent.svg'} alt='' width={350} height={170} className='hidden md:absolute bottom-0 left-0' />
     </div>
   )
 }

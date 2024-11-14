@@ -16,7 +16,7 @@ export const Quote = ({ quote, author } : QuoteProps) => {
           <span className='w-full flex justify-end items-center'><MinusIcon className='size-4 mr-2'/>{author}</span>
         </div>
       </div>
-      <Image src={'/images/quote-accent.svg'} alt='' width={150} height={60} className='absolute bottom-0 right-0' />
+      <Image src={'/images/quote-accent.svg'} alt='' width={150} height={60} className='hidden md:absolute bottom-0 right-0' />
     </div>
   )
 }

@@ -56,7 +56,7 @@ export default function ContactForm() {
         </div>
         <div className="flex justify-center items-center mt-24">
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 w-2/3">
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 w-full lg:w-2/3">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <FormField
                   control={form.control}
@@ -119,7 +119,7 @@ export default function ContactForm() {
           </Form>
         </div>
       </div>
-      <Image src={'/images/contact-accent.svg'} alt='' width={120} height={120} className='absolute top-0 left-0' />
+      <Image src={'/images/contact-accent.svg'} alt='' width={120} height={120} className='hidden md:absolute top-0 left-0' />
     </div>
   )
 }
