@@ -2,7 +2,7 @@ import React from 'react'
 import { Button } from '../ui/button'
 import Image from 'next/image'
 
-const Hero = () => {
+export const Hero = () => {
   return (
     <div className='bg-[#F4ECE4] relative'>
       <div className='mx-auto flex max-w-7xl items-center justify-between p-8 lg:px-8'>
@@ -28,5 +28,3 @@ const Hero = () => {
     </div>
   )
 }
-
-export default Hero
