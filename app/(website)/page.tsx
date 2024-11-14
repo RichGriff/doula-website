@@ -1,5 +1,5 @@
 import About from "@/components/website/about";
-// import { Hero } from "@/components/website/hero";
+import { Hero } from "@/components/website/hero-section";
 import Process from "@/components/website/process";
 import { Quote } from "@/components/website/quote";
 import Services from "@/components/website/services";
@@ -7,7 +7,7 @@ import Services from "@/components/website/services";
 export default function Home() {
   return (
     <>
-      {/* <Hero/> */}
+      <Hero />
       <Services />
       <About />
       <Process />
