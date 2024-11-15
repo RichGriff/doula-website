@@ -37,7 +37,7 @@ const services = [
 
 const Services = () => {
   return (
-    <div className="bg-[#FFFDFB] py-24 sm:py-32">
+    <div className="bg-[#FFFDFB] py-10 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {services.length === 0 && (
           <div className="flex justify-center items-center text-muted-foreground">
