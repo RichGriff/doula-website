@@ -48,7 +48,7 @@ const Services = () => {
           {services.map((service: any) => (
             <div key={service.id} className="p-6">
               <div className="flex flex-col justify-start items-start gap-y-4">
-                <img src={service.icon} alt={service.title} />
+                <img src={service.icon} alt={service.title} className=""/>
                 <h2 className="text-3xl font-heading font-medium my-2 text-[#2C384A]">{service.title}</h2>
                 <ul>
                   {service.features.map((feature : any) => (

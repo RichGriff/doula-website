@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const testimonials = [
   {
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh.",
+    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus.",
     author: {
       name: "Frida Carla",
       handle: "Birthing Mother",
@@ -74,12 +74,12 @@ export default function Testimonials() {
         <div className="flex justify-center items-center mt-16 relative">
           {/* Testimonial Content with fade-in/out transition */}
           <div
-            className={`flex flex-col justify-center items-center gap-6 transition-opacity duration-500 ease-in-out ${
+            className={`flex flex-col justify-center items-center gap-6 transition-opacity duration-500 ease-in-out h-auto lg:h-[190px] ${
               isFading ? "opacity-0" : "opacity-100"
             }`}
-            style={{ height: "190px" }}
+            // style={{ height: "190px" }}
           >
-            <div className="flex-1 px-32 mb-4 text-center text-pretty h-36 overflow-hidden">
+            <div className="flex-1 px-3 lg:px-32 mb-4 text-center text-pretty h-36 overflow-hidden">
               {body}
             </div>
 
@@ -101,7 +101,7 @@ export default function Testimonials() {
           </div>
 
           {/* Navigation buttons */}
-          <div className="absolute top-8 left-0 group">
+          <div className="absolute -bottom-12 left-40 lg:top-8 lg:left-0 group">
             <Button
               size={"icon"}
               onClick={handlePrevious}
@@ -110,7 +110,7 @@ export default function Testimonials() {
               <ChevronLeftIcon className="size-3 text-[#D0C9C3] group-hover:text-black" />
             </Button>
           </div>
-          <div className="absolute top-8 right-0 group">
+          <div className="absolute -bottom-12 right-40 lg:top-8 lg:right-0 group">
             <Button
               size={"icon"}
               onClick={handleNext}

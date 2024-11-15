@@ -12,17 +12,28 @@ export const Hero = () => {
             <p className='text-md lg:text-lg mb-10 text-[#2C384A]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.</p>
             <Button className='uppercase text-xs py-6 px-8 bg-[#5E55AE] hover:bg-[#554d9e] text-white'>Book a discovery call</Button>
           </div>
-          <div className='flex justify-center items-center'>
-            <div className='relative w-96 h-[260px] lg:w-[404px] mb-8 lg:-mb-24 lg:h-[523px] rounded-lg lg:rounded-tl-full lg:rounded-tr-full'>
+          {/* Desktop Image */}
+          <div className='hidden lg:flex justify-center items-center'>
+            <div className='relative w-[404px] -mb-24 h-[523px] rounded-lg lg:rounded-tl-full lg:rounded-tr-full'>
+              <Image
+                src={'/images/hero.png'}
+                alt='Bridie and baby'
+                // width={380}
+                // height={120}
+                fill
+                className='rounded-md lg:rounded-tl-full lg:rounded-tr-full z-10 object-cover'
+              />
+            </div>
+          </div>
+
+          {/* Mobile Image */}
+          <div className="flex md:hidden w-full h-[260px] mb-8 rounded-md relative">
             <Image
               src={'/images/hero.png'}
               alt='Bridie and baby'
-              // width={380}
-              // height={120}
               fill
-              className='rounded-md lg:rounded-tl-full lg:rounded-tr-full z-10 object-cover'
+              className='rounded-md z-10 object-cover'
             />
-            </div>
           </div>
         </div>
         <Image src={'/images/hero-accent-1.png'} alt='' width={400} height={150} className='hidden md:absolute -top-24 left-96' />
