@@ -7,7 +7,7 @@ export default function About() {
     <div className="bg-[#F4ECE4] py-24 relative">
       {/* Image Container */}
       <div className="relative flex justify-end">
-        <div className="hidden md:flex md:absolute md:left-[-150px] md:top-[0] w-[800px] h-[560px] rounded-tr-full rounded-br-full">
+        <div className="hidden lg:flex lg:absolute lg:left-[-300px] xl:left-[-150px] lg:top-[0] w-[800px] h-[560px] rounded-tr-full rounded-br-full">
           <Image 
             src={'/images/about-me.jpg'} 
             alt="About me image" 
@@ -22,7 +22,7 @@ export default function About() {
       </div>
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 relative z-10">
-        <div className="flex md:hidden w-full h-[260px] bg-red-400 rounded-md relative">
+        <div className="flex lg:hidden w-full h-[260px] md:h-[320px] rounded-md relative">
           <Image
             src={'/images/about-me.jpg'}
             fill

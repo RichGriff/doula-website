@@ -101,7 +101,7 @@ export default function Testimonials() {
           </div>
 
           {/* Navigation buttons */}
-          <div className="absolute -bottom-12 left-40 lg:top-8 lg:left-0 group">
+          <div className="absolute -bottom-12 left-8 lg:top-8 lg:left-0 group">
             <Button
               size={"icon"}
               onClick={handlePrevious}
@@ -110,7 +110,7 @@ export default function Testimonials() {
               <ChevronLeftIcon className="size-3 text-[#D0C9C3] group-hover:text-black" />
             </Button>
           </div>
-          <div className="absolute -bottom-12 right-40 lg:top-8 lg:right-0 group">
+          <div className="absolute -bottom-12 right-8 lg:top-8 lg:right-0 group">
             <Button
               size={"icon"}
               onClick={handleNext}
