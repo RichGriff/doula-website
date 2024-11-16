@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Button } from "../ui/button";
 import { MoveRightIcon } from "lucide-react";
+import Link from "next/link";
 
 export default function About() {
   return (
@@ -47,8 +48,8 @@ export default function About() {
               at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat.
             </p>
           </div>
-          <Button variant="link" className="mt-8 px-0 text-[#5E55AE] hover:text-[#4e469e]">
-          Find out more <MoveRightIcon className="ml-2 size-4" />
+          <Button asChild variant="link" className="mt-8 px-0 text-[#5E55AE] hover:text-[#4e469e]">
+            <Link href={'/about'}>Find out more <MoveRightIcon className="ml-2 size-4" /></Link>
           </Button>
         </div>
       </div>

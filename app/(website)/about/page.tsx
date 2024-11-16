@@ -1,4 +1,6 @@
+import ContactForm from "@/components/website/contact"
 import { PageHeader } from "@/components/website/page-header"
+import { Quote } from "@/components/website/quote"
 import Image from "next/image"
 
 const AboutPage = () => {
@@ -34,7 +36,7 @@ const AboutPage = () => {
         <div className="relative flex justify-end">
           <div className="hidden lg:flex lg:absolute lg:left-[-300px] xl:left-[-150px] lg:-top-28 w-[800px] h-[560px] rounded-tr-full rounded-br-full">
             <Image
-              src={'/images/about-me.jpg'} 
+              src={'https://images.unsplash.com/photo-1520377091082-c30273049c2a?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'} 
               alt="About me image" 
               layout="fill"
               className="object-cover rounded-tr-full rounded-br-full z-10"
@@ -49,7 +51,7 @@ const AboutPage = () => {
         <div className="mx-auto max-w-7xl px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 relative z-10">
           <div className="flex lg:hidden w-full h-[260px] md:h-[320px] rounded-md relative">
             <Image
-              src={'/images/about-me.jpg'}
+              src={'https://images.unsplash.com/photo-1520377091082-c30273049c2a?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
               fill
               alt=''
               className="object-cover rounded-md"
@@ -86,7 +88,7 @@ const AboutPage = () => {
       {/* Section 3 */}
       <div className="bg-[#FFFDFB] py-10 mb-20 sm:py-32 relative">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="pb-28">
+          <div className="pb-28 lg:pb-0">
             <h3 className="text-3xl font-heading">
               My Doula Journey
             </h3>
@@ -129,6 +131,9 @@ const AboutPage = () => {
         </div>
       </div>
 
+      <Quote quote="Birth is the sudden opening of a window, through which you look out upon a stupendous prospect. For what has happened? A miracle. You have exchanged nothing for the possibility of everything." />
+      
+      <ContactForm />
     </div>
   )
 }
