@@ -44,7 +44,7 @@ const Process = () => {
           ))}
         </div>
       </div>
-      <Image src={'/images/process-accent.svg'} alt='' width={350} height={170} className='hidden md:absolute bottom-0 left-0' />
+      <Image src={'/images/process-accent.svg'} alt='' width={350} height={170} className='hidden lg:block absolute bottom-0 left-0' />
     </div>
   )
 }

@@ -119,7 +119,7 @@ export default function ContactForm() {
           </Form>
         </div>
       </div>
-      <Image src={'/images/contact-accent.svg'} alt='' width={120} height={120} className='hidden md:absolute top-0 left-0' />
+      <Image src={'/images/contact-accent.svg'} alt='' width={120} height={120} className='hidden lg:block absolute top-0 left-0' />
     </div>
   )
 }
