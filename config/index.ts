@@ -1,3 +1,4 @@
+import { Services } from "@/types"
 import { GlobeAltIcon } from "@heroicons/react/24/outline"
 import { Calendar, LayoutGrid, Mails, User, Users } from "lucide-react"
 
@@ -11,9 +12,46 @@ export const navigation = [
 ]
 
 export const websiteNavigation = [
-  { name: 'Services', href: '#' },
+  { name: 'Services', href: 'services' },
   { name: 'About Me', href: 'about' },
   { name: 'Blog', href: '#' }
+]
+
+export const services: Services = [
+  {
+    id: 1, 
+    icon: '/images/service1.svg',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh.',
+    title: 'Parental Support',
+    price: 19.99,
+    rate: 'per day',
+    included: [ 'Personalized birth plan creation', 'Childbirth education classes', 'Pregnancy wellness guidance' ],
+    background: 'LIGHT'
+  },
+  {
+    id: 2, 
+    icon: '/images/service2.svg',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh.',
+    title: 'Birthing Guidance',
+    price: 125.00,
+    rate: 'based on 4 weeks',
+    included: [ 'Continious labour support', 'Pain management techniques', 'Partner support coaching' ],
+    background: 'DARK',
+    accent: true,
+    accentLocation: "TOP"
+  },
+  {
+    id: 3, 
+    icon: '/images/service3.svg',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh.',
+    title: 'Postpartum Care',
+    price: 20.00,
+    rate: 'per day',
+    included: [ 'Breastfeeding support', 'Newborn care education', 'Emotional support for new parents' ],
+    background: 'LIGHT',
+    accent: true,
+    accentLocation: "BOTTOM"
+  }
 ]
 
 export const teams = [

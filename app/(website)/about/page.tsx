@@ -6,7 +6,7 @@ import Image from "next/image"
 const AboutPage = () => {
   return (
     <div>
-      <PageHeader />
+      <PageHeader heading="The Journey So Far: My Path and Purpose" subHeading="Embracing Growth, Learning, and the Unexpected" />
 
       {/* Secion 1 */}
       <div className="bg-[#FFFDFB] py-10 mb-20 sm:py-32">
