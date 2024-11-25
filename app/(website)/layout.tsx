@@ -1,3 +1,4 @@
+import Footer from "@/components/website/footer"
 import Header from "@/components/website/header"
 import { ReactNode } from "react"
 
@@ -7,7 +8,7 @@ const WebsiteLayout = ({ children } : { children: ReactNode }) => {
     <>
       <Header />
       {children}
-      {/* Footer */}
+      <Footer />
     </>
   )
 }

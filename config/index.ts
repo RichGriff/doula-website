@@ -1,5 +1,5 @@
 import { GlobeAltIcon } from "@heroicons/react/24/outline"
-import { BookOpen, Calendar, FolderIcon, LayoutGrid, Mails, ServerIcon, Settings2, SignalIcon, User, Users, WalletCards } from "lucide-react"
+import { Calendar, LayoutGrid, Mails, User, Users } from "lucide-react"
 
 export const navigation = [
   { name: 'Dashboard', href: '/admin', icon: LayoutGrid, current: false },
@@ -8,6 +8,12 @@ export const navigation = [
   { name: 'Bookings', href: '/admin/bookings', icon: Calendar, current: false },
   { name: 'Website', href: '/admin/website', icon: GlobeAltIcon, current: false },
   { name: 'Users', href: '/admin/users', icon: User, current: false },
+]
+
+export const websiteNavigation = [
+  { name: 'Services', href: '#' },
+  { name: 'About Me', href: 'about' },
+  { name: 'Blog', href: '#' }
 ]
 
 export const teams = [

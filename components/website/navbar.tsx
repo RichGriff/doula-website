@@ -1,16 +1,10 @@
 'use client'
 
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon } from '@heroicons/react/24/outline'
 import { Button } from '../ui/button'
 import { useState } from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
-
-const navigation = [
-  { name: 'Services', href: '#' },
-  { name: 'About Me', href: 'about' },
-  { name: 'Blog', href: '#' }
-]
+import { websiteNavigation } from '@/config'
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -39,7 +33,7 @@ const Navbar = () => {
         </button>
       </div>
       <div className="hidden lg:flex items-center lg:gap-x-8">
-        {navigation.map((item) => (
+        {websiteNavigation.map((item) => (
           <a key={item.name} href={item.href} className="text-xs font-semibold leading-6 text-gray-900 uppercase">
             {item.name}
           </a>
