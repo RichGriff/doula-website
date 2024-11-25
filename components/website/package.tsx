@@ -9,12 +9,12 @@ interface PackageProps {
 
 export const Package = ({ service } : PackageProps) => {
   return (
-    <div className={cn('py-10 sm:py-32 relative', service.background === 'LIGHT' ? 'bg-[#FFFDFB]' : 'bg-[#F4ECE4]')}>
+    <div className={cn('py-24 lg:py-10 sm:py-32 relative', service.background === 'LIGHT' ? 'bg-[#FFFDFB]' : 'bg-[#F4ECE4]')}>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="">
           <img src={service.icon} alt={service.title} className="mb-6"/>
 
-          <div className='grid grid-cols-2 gap-20'>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-20'>
             <div>
               <h3 className="text-3xl font-heading">{service.title}</h3>
               <div className="w-16 h-1 bg-[#5E55AE] my-4 rounded-full mb-6" />
@@ -23,7 +23,7 @@ export const Package = ({ service } : PackageProps) => {
               </p>
             </div>
 
-            <div className='px-8'>
+            <div className='px-0 lg:px-8'>
               <p className="text-3xl font-heading mb-8">£{service.price.toFixed(2)}<span className='ml-2 text-sm font-medium'>{service.rate}</span></p>
               <p className='font-medium text-sm mb-4'>Whats included:</p>
               <ul>
