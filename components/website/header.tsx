@@ -22,7 +22,7 @@ export default function Header() {
   }, []);
 
   return (
-    <div className="bg-[#F4ECE4] h-24">
+    <div className="x h-24">
       <header
         className={`inset-x-0 top-0 z-50 fixed transition-colors duration-300 ${
           isScrolled ? 'bg-[#F4ECE499] backdrop-blur' : 'bg-transparent'

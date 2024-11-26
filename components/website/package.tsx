@@ -9,7 +9,7 @@ interface PackageProps {
 
 export const Package = ({ service } : PackageProps) => {
   return (
-    <div className={cn('py-24 lg:py-10 sm:py-32 relative', service.background === 'LIGHT' ? 'bg-[#FFFDFB]' : 'bg-[#F4ECE4]')}>
+    <div className={cn('py-24 lg:py-32 relative', service.background === 'LIGHT' ? 'bg-[#FFFDFB]' : 'bg-[#F4ECE4]')}>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="">
           <img src={service.icon} alt={service.title} className="mb-6"/>
