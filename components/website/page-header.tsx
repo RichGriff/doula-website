@@ -4,10 +4,13 @@ import Image from 'next/image'
 interface PageHeaderProps {
   heading: string
   subHeading: string
-  imageUrl?: string
+  image: {
+    url: string
+    alt: string
+  }
 }
 
-export const PageHeader = ({ heading, subHeading, imageUrl } : PageHeaderProps) => {
+export const PageHeader = ({ heading, subHeading, image } : PageHeaderProps) => {
   return (
     <div className='bg-[#F4ECE4] relative'>
       <div className='mx-auto flex max-w-7xl items-center justify-between p-8 lg:px-8'>
@@ -24,8 +27,8 @@ export const PageHeader = ({ heading, subHeading, imageUrl } : PageHeaderProps) 
           <div className='hidden md:flex justify-center items-center'>
             <div className='relative w-[404px] -mb-24 h-[523px] rounded-lg md:rounded-tl-full md:rounded-bl-full md:rounded-tr-full'>
               <Image
-                src={'https://images.unsplash.com/photo-1526277015674-026cb84653ec?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
-                alt='Bridie and baby'
+                src={image.url}
+                alt={image.alt}
                 fill
                 className='rounded-md md:rounded-tl-full md:rounded-bl-full md:rounded-tr-full z-10 object-cover'
               />
@@ -35,8 +38,8 @@ export const PageHeader = ({ heading, subHeading, imageUrl } : PageHeaderProps) 
           {/* Mobile Image */}
           <div className="flex md:hidden w-full h-[260px] mb-8 rounded-md relative">
             <Image
-              src={'https://images.unsplash.com/photo-1526277015674-026cb84653ec?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
-              alt='Bridie and baby'
+              src={image.url}
+              alt={image.alt}
               fill
               className='rounded-md z-10 object-cover'
             />

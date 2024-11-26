@@ -4,36 +4,7 @@ import { useState } from "react";
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 import { Button } from "../ui/button";
 import Image from "next/image";
-
-const testimonials = [
-  {
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus.",
-    author: {
-      name: "Frida Carla",
-      handle: "Birthing Mother",
-      imageUrl:
-        "https://images.unsplash.com/photo-1656137955203-c0f86a4a8be3?ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    },
-  },
-  {
-    body: "Curabitur pellentesque nibh nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla.",
-    author: {
-      name: "John Doe",
-      handle: "Satisfied Client",
-      imageUrl:
-        "https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    },
-  },
-  {
-    body: "Vestibulum auctor ornare leo, non suscipit magna interdum eu. Maecenas vitae mattis tellus. Nullam quis imperdiet augue.",
-    author: {
-      name: "Jane Smith",
-      handle: "Happy Customer",
-      imageUrl:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    },
-  },
-];
+import { testimonials } from "@/config";
 
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);

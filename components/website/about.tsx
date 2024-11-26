@@ -2,16 +2,18 @@ import Image from "next/image";
 import { Button } from "../ui/button";
 import { MoveRightIcon } from "lucide-react";
 import Link from "next/link";
+import { aboutSectionData } from "@/config";
 
 export default function About() {
+  const { title, linkText, content, image } = aboutSectionData
   return (
     <div className="bg-[#F4ECE4] py-24 relative">
       {/* Image Container */}
       <div className="relative flex justify-end">
         <div className="hidden lg:flex lg:absolute lg:left-[-300px] xl:left-[-150px] lg:top-[0] w-[800px] h-[560px] rounded-tr-full rounded-br-full">
           <Image 
-            src={'/images/about-me.jpg'} 
-            alt="About me image" 
+            src={image.url} 
+            alt={image.alt} 
             layout="fill"
             className="object-cover rounded-tr-full rounded-br-full z-10"
             style={{
@@ -25,9 +27,9 @@ export default function About() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 relative z-10">
         <div className="flex lg:hidden w-full h-[260px] md:h-[320px] rounded-md relative">
           <Image
-            src={'/images/about-me.jpg'}
+            src={image.url} 
+            alt={image.alt} 
             fill
-            alt=''
             className="object-cover rounded-md"
             style={{
               objectPosition: 'center 30%',
@@ -38,18 +40,15 @@ export default function About() {
         
         {/* Text Content */}
         <div className="">
-          <h3 className="text-3xl font-heading">A little about me</h3>
+          <h3 className="text-3xl font-heading">
+            {title}
+          </h3>
           <div className="w-20 h-1 bg-[#5E55AE] my-4 rounded-full" />
           <div className="flex flex-col gap-4 leading-relaxed pt-6 text-gray-700">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh.
-            </p>
-            <p>
-              at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat.
-            </p>
+            <div className="prose" dangerouslySetInnerHTML={{__html: content}}></div>
           </div>
           <Button asChild variant="link" className="mt-8 px-0 text-[#5E55AE] hover:text-[#4e469e]">
-            <Link href={'/about'}>Find out more <MoveRightIcon className="ml-2 size-4" /></Link>
+            <Link href={'/about'}>{linkText}<MoveRightIcon className="ml-2 size-4" /></Link>
           </Button>
         </div>
       </div>

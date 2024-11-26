@@ -8,7 +8,11 @@ import React from 'react'
 const PricingPage = () => {
   return (
     <div>
-      <PageHeader heading="Services & Pricing" subHeading="All my services can be built around your journey" />
+      <PageHeader 
+        heading="Services & Pricing" 
+        subHeading="All my services can be built around your journey"
+        image={{ url: '', alt: '' }}
+      />
       {services.map((service) => (
         <Package key={service.id} service={service} />
       ))}
