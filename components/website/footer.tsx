@@ -36,7 +36,7 @@ export default function Footer() {
     <footer className="bg-[#F4ECE4]">
       <div className="flex flex-col-reverse md:flex-row justify-between gap-6 mx-auto max-w-7xl overflow-hidden px-6 py-16 lg:px-8">
         <p className="text-center text-sm/6 text-[#2c384a]">&copy; 2024 Doula Bridie, Inc. All rights reserved.</p>
-        <div className="flex justify-center gap-x-10">
+        <div className="flex justify-center gap-x-2">
           {socials.links.map((item) => (
             <a key={item.name} href={item.href} className="text-[#2c384a] hover:text-[#2c384a95]">
               <span className="sr-only">{item.name}</span>
