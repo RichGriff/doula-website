@@ -18,7 +18,7 @@ export const Package = ({ service } : PackageProps) => {
             <div>
               <h3 className="text-3xl font-heading">{service.title}</h3>
               <div className="w-16 h-1 bg-[#5E55AE] my-4 rounded-full mb-6" />
-              <p>
+              <p className='leading-loose'>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh.
               </p>
             </div>
