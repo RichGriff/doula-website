@@ -108,7 +108,7 @@ const AboutPage = () => {
               </div>
             </div>
 
-            <div className="flex justify-start items-center absolute bottom-0 lg:bottom-6 right-6 lg:right-0 gap-1">
+            <div className="flex justify-start items-center absolute bottom-0 right-6 lg:right-0 gap-1">
               {sections[2].images.map((image, index) => (
                 <div className="w-28 h-28 lg:w-44 lg:h-44 relative">
                   <Image src={image.url} alt={image.alt} fill className={cn(`object-cover`, index == 0 ? 'rounded-tl-[112px]' : index == 1 ? null : 'rounded-br-[112px]')} />

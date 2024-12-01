@@ -147,13 +147,16 @@ export const aboutData = {
       id: 1,
       title: 'My Background',
       content: `<p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh.
+              I\'m Bridie. I\'m a doula, a partner, and a mother of two wildlings.
               </p>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh,
+                For close to a decade I worked intensively as a qualified Occupational Therapist (OT), within the NHS. This work was very much about supporting people to do what they need and want to do in their daily lives, and I practiced with diverse client populations, working with people right across the lifespan. Ultimately my chosen specialism was mental health. Presently I still hold my OT registration, and have immense gratitude for the great array of transferable skills this path has given me.
               </p>
               <p>
-                at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat.
+                What became apparent was that my most treasured aspect of being an OT, was that of ‘holding space’ for others. To me, what this means, is to show up with presence, nonjudgmentally, and to nurture an environment of safety. From this place, what needs to be witnessed can be, and this is often where we can connect  to our own power and intuition. It is also where I have seen people make their most significant and transformative changes.
+              </p>
+              <p>
+                At its very essence, being a doula is about that deep and wonderful skill of space holding.
               </p>`,
       images: []
     },
@@ -161,14 +164,9 @@ export const aboutData = {
       id: 2,
       title: 'Becoming a mother',
       content: `<p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh,
+                Crossing the thresholds of pregnancy, birth, and the experience of becoming a mother, were also very much catalysts for turning towards the path of doula. I feel deeply connected to the rawness of this time, and the desire to walk alongside others in navigating their pregnancy, birth and postpartum in the most grounded, empowered and informed way possible. 
               </p>
-              <p>
-                at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat.
-              </p>
-              <p>
-                at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat.
-              </p>`,
+              `,
       images: [
         { 
           url: 'https://images.unsplash.com/photo-1520377091082-c30273049c2a?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 
@@ -180,18 +178,18 @@ export const aboutData = {
       id: 3,
       title: 'My Doula Journey',
       content: `<p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh,
+                  I trained with Nurturing Birth, certifying as a birth and postnatal doula in September 2024. Nurturing Birth is a well known and established doula school, with an excellent reputation. There is a strong emphasis on ongoing development and continued mentoring. 
                 </p>
                 <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh,
+                  Woven within my particular approach to being a doula, is the concept of the Anam Cara, which originates from within my own Celtic roots. 
                 </p>
                 <p>
-                at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat.
+                  With Anam the Gaelic for soul, and Cara the word for friend, the anam cara was a \‘soul friend.\’ This was someone with whom you could \‘share your innermost self, your mind and your heart.\’ To be someone’s Anam Cara, is understood as \‘an act of recognition and belonging.\’ A place in which \‘you are understood as you are, without mask or pretension.\’ (Anam Cara 2023, p.12).
                 </p><p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh,
+                  The notion of the Anam Cara is all about a connection of high quality, depth, respect and compassion. And it is these qualities I consider central to my work as a doula. I work simply under the name DoulaBridie. In choosing someone to support you at such a metamorphic and pivotal time in your life as the perinatal, I believe the connection you feel with your doula is the most important aspect of all. 
                 </p>
                 <p>
-                at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat.
+                  Let's have a conversation to explore your needs, and feel into the sense of fit between us
                 </p>`,
       images: [
         { 
