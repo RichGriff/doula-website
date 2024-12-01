@@ -52,7 +52,7 @@ const AboutPage = () => {
               src={sections[1].images[0].url} 
               alt={sections[1].images[0].alt}
               layout="fill"
-              className="object-cover rounded-tr-full rounded-br-full z-10"
+              className="object-cover rounded-tr-full rounded-br-full z-10 saturate-0"
               style={{
                 objectPosition: 'center 50%', // Centers and shifts the image upward slightly
                 transform: 'translateY(-5%)' // Additional fine-tuning for upward adjustment
@@ -67,7 +67,7 @@ const AboutPage = () => {
               src={sections[1].images[0].url} 
               alt={sections[1].images[0].alt}
               fill
-              className="object-cover rounded-md"
+              className='object-cover rounded-md grayscale'
               style={{
                 objectPosition: 'center',
               }}

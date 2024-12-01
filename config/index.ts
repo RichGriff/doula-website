@@ -139,7 +139,7 @@ export const aboutData = {
   title: 'The Journey So Far: My Path and Purpose',
   tagline: 'Embracing Growth, Learning, and the Unexpected',
   image: {
-    url: '/images/bridie_izee.jpg',
+    url: '/images/preg_bridie.jpg',
     // url: 'https://images.unsplash.com/photo-1526277015674-026cb84653ec?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     alt: ''
   },
@@ -173,9 +173,9 @@ export const aboutData = {
               `,
       images: [
         { 
-          url: '/images/preg_bridie.jpg',
+          url: '/images/preg_bridie2.jpg',
           // url: 'https://images.unsplash.com/photo-1520377091082-c30273049c2a?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 
-          alt: '' 
+          alt: '',
         }
       ]
     },
