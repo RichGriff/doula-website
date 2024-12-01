@@ -84,6 +84,7 @@ export const testimonials = [
 ];
 
 export const websiteNavigation = [
+  { name: 'Home', href: '/' },
   { name: 'Services', href: 'services' },
   { name: 'About Me', href: 'about' },
   { name: 'Blog', href: '#' }
