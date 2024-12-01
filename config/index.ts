@@ -139,7 +139,8 @@ export const aboutData = {
   title: 'The Journey So Far: My Path and Purpose',
   tagline: 'Embracing Growth, Learning, and the Unexpected',
   image: {
-    url: 'https://images.unsplash.com/photo-1526277015674-026cb84653ec?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    url: '/images/bridie_izee.jpg',
+    // url: 'https://images.unsplash.com/photo-1526277015674-026cb84653ec?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     alt: ''
   },
   sections: [
@@ -166,10 +167,14 @@ export const aboutData = {
       content: `<p>
                 Crossing the thresholds of pregnancy, birth, and the experience of becoming a mother, were also very much catalysts for turning towards the path of doula. I feel deeply connected to the rawness of this time, and the desire to walk alongside others in navigating their pregnancy, birth and postpartum in the most grounded, empowered and informed way possible. 
               </p>
+              <p>
+                Crossing the thresholds of pregnancy, birth, and the experience of becoming a mother, were also very much catalysts for turning towards the path of doula. I feel deeply connected to the rawness of this time, and the desire to walk alongside others in navigating their pregnancy, birth and postpartum in the most grounded, empowered and informed way possible. 
+              </p>
               `,
       images: [
         { 
-          url: 'https://images.unsplash.com/photo-1520377091082-c30273049c2a?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 
+          url: '/images/preg_bridie.jpg',
+          // url: 'https://images.unsplash.com/photo-1520377091082-c30273049c2a?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 
           alt: '' 
         }
       ]

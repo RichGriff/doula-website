@@ -54,7 +54,7 @@ const AboutPage = () => {
               layout="fill"
               className="object-cover rounded-tr-full rounded-br-full z-10"
               style={{
-                objectPosition: 'center 30%', // Centers and shifts the image upward slightly
+                objectPosition: 'center 50%', // Centers and shifts the image upward slightly
                 transform: 'translateY(-5%)' // Additional fine-tuning for upward adjustment
               }}
             />
@@ -69,7 +69,7 @@ const AboutPage = () => {
               fill
               className="object-cover rounded-md"
               style={{
-                objectPosition: 'center 30%',
+                objectPosition: 'center',
               }}
             />
           </div>
